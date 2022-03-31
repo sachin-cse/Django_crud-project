@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;900&display=swap");
+
+:root {
+  --base: #ff5f5d;
+  --black: #191919;
+  --primary: #ff5f5d;
+  --secondary: #00ccbf;
+  --ternary: #72f2eb;
+  --font-color: #242424;
+  --white: #fff;
+}
+
+body {
+  color: var(--font-color);
+  font-family: "Inter", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.6;
+  background: var(--base);
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+label .menu {
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  z-index: 500;
+  width: 200px;
+  height: 200px;
+  background: var(--secondary);
+  border-radius: 50% 50% 50% 50%;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+  cursor: pointer;
+}
+
+label .hamburger {
+  position: absolute;
+  top: 135px;
+  left: 50px;
+  width: 30px;
+  height: 2px;
+  background: var(--white);
+  display: block;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  z-index: 215;
+}
+
+label .hamburger:after,
+label .hamburger:before {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+}
+
+label .hamburger:before {
+  top: -10px;
+}
+
+label .hamburger:after {
+  bottom: -10px;
+}
+
+label input {
+  display: none;
+}
+
+label input:checked + .menu {
+  box-shadow: 0 0 0 100vw var(--secondary), 0 0 0 100vh var(--secondary);
+  border-radius: 0;
+}
+
+label input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+label input:checked + .menu .hamburger:after {
+  cursor: pointer;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
+label input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+}
+
+label input:checked + .menu + ul {
+  opacity: 1;
+  cursor: pointer;
+}
+
+label ul {
+  position: absolute;
+  z-index: 600;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  -webkit-transition: 0.25s 0s ease-in-out;
+  transition: 0.25s 0s ease-in-out;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary);
+}
+
+label a {
+  margin-bottom: 1em;
+  display: block;
+  color: var(--primary);
+  text-decoration: none;
+}
+  :hover {
+    background-color: var(--white);
+    color: var(--secondary);
+    padding: 0px 8px;
+    border-radius: 4px;
+    border-bottom-left-radius: 18px;
+  }
+
+
+h1 {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary);
+}

@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE HTML>
+    <html>
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+            <title>Edit Page</title>
+            <link rel="stylesheet" href="{% static 'edit.css' %}">
+        </head>
+        <body>
+            <div>
+                <form action = "/show">
+                    <input type = "submit" value = "show Records" id = "id4">
+                </form>
+            </div>
+            <div id = "divone">
+                <form action = "/RecordEdited" method = "post">
+                    {% csrf_token %}
+                    <h3>ID:<input type = "text" name = "ID" id = "id1" value = {{ID}}></h3>
+                    <h3>Data 1:<input type = "text" name = "Data1" id = "id2" value = {{data1}}></h3>
+                    <h3>Data 2:<input type = "text" name = "Data2" id = "id3" value = {{data2}}></h3>
+                    <input type = "submit" id = "btn" value = "Edit Records">
+                </form>
+                {{msg}}
+            </div>
+        </body>
+    </html>

@@ -1,0 +1,32 @@
+body{
+    background-color:rgb(107,189,152);
+}
+
+#divone{
+    background-color:rgb(226,225,223);
+    max-width:fit-content;
+    padding:1%;
+    margin-left: 40%;
+    margin-top: 15%;
+}
+#btn{
+    margin-left:35%;
+    color:white;
+    background-color:blue;
+    padding:5px;
+    font-size:16px;
+}
+#divtwo{
+    margin-left:90%;
+}
+#id4{
+    color:white;
+    background-color:blue;
+    width:100%;
+    padding:10px;
+    font-size:18px;
+    font-weight: bold;
+}
+#id1{
+    margin-left:13.5%;
+}

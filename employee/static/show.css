@@ -1,0 +1,33 @@
+body{
+    background-color:rgb(149, 226, 191);
+}
+
+table,th,tr,td{
+    border-collapse:collapse;
+    border:2px solid black;
+    margin:auto;
+    width:30%;
+    padding:10px;
+    font-size:18px;
+}
+
+
+#head{
+    color:black;
+    max-width:30%;
+    text-align:center;
+    margin-left:34%;
+    padding:0.5%;
+    background-color:rgb(226,225,226);
+}
+
+#seconddiv{
+    color:black;
+    padding-left:15px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+tr:nth-child(even){
+    background-color:#18c577;
+}

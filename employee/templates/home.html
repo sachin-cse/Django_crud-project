@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE HTML>
+    <html>
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+            <title>Crud operation</title>
+            <link rel="stylesheet" href="{% static 'home.css' %}">
+        </head>
+        <body>
+            {{msg}}
+            <div id = "divtwo">
+                <form action = "/show">
+                    <input type = "submit" value = "show Records" id = "id4">
+                </form>
+            </div>
+            <div id = "divone">
+                <form action = "/send" method = "post">
+                    {% csrf_token %}
+                    <h3>ID:<input type = "text" name = "id" id = "id1" required autofocus></h3>
+                    <h3>Data 1:<input type = "text" name = "data1" id = "id2" required autofocus></h3>
+                    <h3>Data 2:<input type = "text" name = "data2" id = "id3" required autofocus></h3>
+                    <input type = "submit" id = "btn">
+                </form>
+            </div>
+        </body>
+    </html>

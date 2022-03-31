@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale = 1.0">
+        <title>Show Data</title>
+        <link rel = "stylesheet" href = "{% static 'show.css' %}">
+    </head>
+    <body>
+        {{msg}}
+        <h3 id = "head">Show All Data</h3>
+        <div id = "seconddiv">
+            <form action = "/">
+                <input type = "submit" value = "<< Back">
+            </form>
+        </div>
+        <div id = "onediv">
+            <table>
+                <th>ID</th>
+                <th>Data1</th>
+                <th>Data2</th>
+                <th>Button</th>
+                {% for d in data %}
+                <tr>
+                    <td>{{d.ID}}</td>
+                    <td>{{d.data1}}</td>
+                    <td>{{d.data2}}</td>
+                    <td>
+                        <a href = "/edit?id={{d.ID}}">Edit</a>
+                        <a href = "/delete?id={{d.ID}}">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>
